@@ -5,14 +5,27 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   // TODO
 
-  let select = document.querySelector('#horn-select');
-  let typeSound = document.querySelector('#expose').getElementsByTagName('img');
+  const selectElement = document.querySelector('#horn-select');
+  const result = document.querySelector('#vales');
+  const imageSRC = document.getElementsByTagName('img');
+  selectElement.addEventListener('change', (event) => {
+    
 
-  input.addEventListener('input', updateValue);
+    result.textContent = `You like ${event.target.value}`;
+    imageSRC.src = `assets/images/${event.target.value}.svg`;
+  });
 
-  function updateValue(e) {
-    select.attributes = e.target.value;
-  }
+
+  /*
+  var selectElement = document.querySelector('#horn-select');
+  // let typeSound = document.querySelector('#expose');
+  var log = document = document.getElementById("vales");
+  
+
+  select.addEventListener('change', (event) => {
+    log.textContent = "Image loaded";
+
+  });
 
   /*
   const img = new Image();
