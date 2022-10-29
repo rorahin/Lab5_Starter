@@ -35,7 +35,7 @@ function init() {
  
   const selectVolume = document.querySelector('#volume');
   let volumeSRC = document.querySelector('[src="assets/icons/volume-level-2.svg"]');
-  selectVolume.addEventListener('change', () => {
+  selectVolume.addEventListener('input', () => {
 
     
     // console.log(parseInt(selectVolume.value));
