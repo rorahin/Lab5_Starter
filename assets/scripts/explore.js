@@ -95,10 +95,14 @@ function init() {
   
   
   readButton.onclick = function () {
+    
     imageSRC.src = `assets/images/smiling-open.png`;
     speak();
-    // imageSRC.src = `assets/images/smiling.png`;
+    
   };
-  
 
+  readButton.addEventListener('change', (event) => {
+    imageSRC.src = `assets/images/smiling.png`;
+  });
+  
 }
